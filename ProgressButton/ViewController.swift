@@ -10,11 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var btnClick: ProgressButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+//        btnClick.setSubLayer()
+        btnClick.commonInit()
+//        btnClick.setColor(.green)
     }
 
+    @IBAction func btnClicked(_ sender: ProgressButton) {
+        sender.clickedToProgress()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
